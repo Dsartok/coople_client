@@ -8,7 +8,11 @@ module.exports = {
   },
   target: 'web',
   resolve: {
-    extensions: ['.ts', '.tsx', '.js']
+    extensions: ['.ts', '.tsx', '.js', '.css', '.scss'],
+    alias: {
+      '~': path.resolve(__dirname, 'src'),
+      '@': path.resolve(__dirname, 'node_modules')
+    }
   },
   module: {
     rules: [
@@ -16,6 +20,22 @@ module.exports = {
         test: /\.tsx?$/,
         use: 'ts-loader',
         exclude: /node-modules/
+      },
+      {
+        test: /\.svg$/,
+        use: ["@svgr/webpack"]
+      },
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          "style-loader",
+          "css-loader",
+          "sass-loader",
+        ],
+      },
+      {
+        test: /\.css$/,
+        use: [{ loader: 'style-loader' }, { loader: 'css-loader' }]
       }
     ]
   },

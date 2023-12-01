@@ -1,0 +1,43 @@
+@import '~/styles/colors';
+
+.components_text {
+  font-family: 'Inter';
+
+  &__color {
+    &-dark {
+      color: $dark-color-main;
+    }
+
+    &-light {
+      color: $dark-text-main;
+    }
+  }
+
+  &__style {
+    &-heading {
+      line-height: 22px;
+      font-weight: 600;
+      font-size: 18px;
+    }
+
+    &-description {
+      line-height: 16px;
+      font-weight: 400;
+      font-size: 14px;
+    }
+  }
+
+  &__weight {
+    &-normal {
+      font-weight: 400;
+    }
+
+    &-bold {
+      font-weight: 600;
+    }
+
+    &-thin {
+      font-weight: 100;
+    }
+  }
+}

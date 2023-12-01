@@ -1,0 +1,19 @@
+@import '~/styles/colors';
+
+.components {
+  &_button {
+    box-sizing: border-box;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    cursor:pointer;
+
+    &__default {
+      border: 3px $dark-color-main solid;
+      background-color: transparent;
+    }
+  }
+}

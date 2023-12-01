@@ -1,0 +1,57 @@
+.game {
+  &_card {
+    padding: 12px;
+    border-radius: 12px;
+    width: 284px;
+    height: 376px;
+    background-color: #D2D2D2;
+    box-sizing: border-box;
+
+    &__image {
+      width: 260px;
+      height: 198px;
+      border-radius: 4px;
+      margin-bottom: 8px;
+
+      img {
+        height: 100%;
+      }
+    }
+
+    &__title {
+      margin-bottom: 8px;
+      height: 20px;
+    }
+
+    &__description {
+      height: 54px;
+      margin-bottom: 6px;
+    }
+
+    &__badges {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      flex-flow: row nowrap;
+      height: 22px;
+      margin-bottom: 6px;
+
+      > :not(:last-child) {
+        margin-right: 4px;
+      }
+    }
+  }
+
+  &_badge {
+    padding: 4px;
+    background-color: #1B1919;
+    color: #D2D2D2;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+
+    > :not(:last-child) {
+      margin-right: 4px;
+    }
+  }
+}

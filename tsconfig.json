@@ -1,12 +1,21 @@
 {
+  "include": [
+    "types/**/*",
+    "src/**/*"
+  ],
   "compilerOptions": {
     "baseUrl": "./",
     "rootDir": "src",
     "outDir": "dist",
     "target": "ES5",
     "module": "ES6",
-    "jsx": "react",
+    "jsx": "react-jsx",
+    "moduleResolution": "Node",
     "noImplicitAny": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "~/*": ["src/*"],
+      "@/*": ["node_modules/*"]
+    }
   }
 }
